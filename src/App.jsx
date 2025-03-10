@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LocomotiveScroll from "locomotive-scroll";
 import Navbar from "./components/navbar/Navbar";
+import Banner from "./components/banner/Banner";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
@@ -40,39 +41,42 @@ const App = () => {
 
     const Cursor = document.querySelector("#Cursor");
     // cursor animation
-    document.addEventListener("mousemove", function (event) {
-      gsap.to(Cursor, {
-        x: event.clientX,
-        y: event.clientY,
-        duration: 0.6,
-        ease: "power2.out",
+    function customCursorMake() {
+      document.addEventListener("mousemove", function (event) {
+        gsap.to(Cursor, {
+          x: event.clientX,
+          y: event.clientY,
+          duration: 0.6,
+          ease: "power2.out",
+        });
       });
-    });
 
-    // Hide cursor when mouse leaves the window
-    document.addEventListener("mouseleave", function () {
-      gsap.to(Cursor, {
-        opacity: 0,
-        duration: 0.3,
+      // Hide cursor when mouse leaves the window
+      document.addEventListener("mouseleave", function () {
+        gsap.to(Cursor, {
+          opacity: 0,
+          duration: 0.3,
+        });
       });
-    });
 
-    // Show cursor when mouse enters the window
-    document.addEventListener("mouseenter", function () {
-      gsap.to(Cursor, {
-        opacity: 1,
-        duration: 0.3,
+      // Show cursor when mouse enters the window
+      document.addEventListener("mouseenter", function () {
+        gsap.to(Cursor, {
+          opacity: 1,
+          duration: 0.3,
+        });
       });
-    });
+    }
+    customCursorMake();
 
     const tl = gsap.timeline();
     // loader animation
     function loader() {
       tl.from("#loader h3", {
         opacity: 0,
-        x: 40,
-        duration: 1,
-        stagger: 0.1,
+        x: 60,
+        duration: 1.6,
+        stagger: 0.3,
       });
       tl.to("#loader h3", {
         opacity: 0,
@@ -108,11 +112,11 @@ const App = () => {
       {/* loader animation */}
       <div
         id="loader"
-        className="h-screen w-screen fixed top-0 bg-[#000] z-50 flex items-center justify-center text-white gap-1 text-2xl"
+        className="h-screen w-screen fixed top-0 bg-[#000] z-50 flex flex-col pl-32 font-silk-serif-light-italic items-start justify-center text-white gap-1 text-6xl font-bold uppercase "
       >
-        <h3>Let's</h3>
-        <h3>go,</h3>
-        <h3>animation practice "</h3>
+        <h3>Your</h3>
+        <h3>Web Experience</h3>
+        <h3>is Loading Right Now...</h3>
       </div>
       <div
         id="Cursor"
@@ -127,7 +131,7 @@ const App = () => {
             <Navbar></Navbar>
           </div>
           <div className="text-white">
-            <h2>this is banner section</h2>
+            <Banner></Banner>
           </div>
         </div>
       </div>
