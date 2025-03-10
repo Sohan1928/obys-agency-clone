@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: RobotoMedium;
+  src: url(./assets//fonts/KFOlCnqEu92Fr1MmEU9fBBc4.ttf);
+}
+@font-face {
+  font-family: RobotoNormal;
+  src: url(./assets//fonts/KFOmCnqEu92Fr1Mu4mxK.ttf);
+}
+@font-face {
+  font-family: PlainRegular;
+  src: url(./assets//fonts/plain-regular-webfont.ttf);
+}
+@font-face {
+  font-family: SilkSerifLightItalic;
+  src: url(./assets//fonts/silkserif-lightitalic-webfont.ttf);
+}
+@font-face {
+  font-family: SilkSerifRegularItalic;
+  src: url(./assets//fonts/silkserif-regularitalic-webfont.ttf);
+}
+
+.font-roboto-medium {
+  font-family: "RobotoMedium", sans-serif;
+}
+
+.font-roboto-normal {
+  font-family: "RobotoNormal", sans-serif;
+}
+
+.font-plain {
+  font-family: "PlainRegular", sans-serif;
+}
+
+.font-silk-serif-light-italic {
+  font-family: "SilkSerifLightItalic", serif;
+}
+
+.font-silk-serif-regular-italic {
+  font-family: "SilkSerifRegularItalic", serif;
+}
