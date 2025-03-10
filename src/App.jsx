@@ -132,6 +132,9 @@ const App = () => {
           <Navbar></Navbar>
           <Banner></Banner>
           <VideoSection></VideoSection>
+          <div>
+            <h2>hello</h2>
+          </div>
         </div>
       </div>
     </div>
