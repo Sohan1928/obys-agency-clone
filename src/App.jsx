@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LocomotiveScroll from "locomotive-scroll";
 import Navbar from "./components/navbar/Navbar";
 import Banner from "./components/banner/Banner";
+import VideoSection from "./components/videoSection/VideoSection";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
@@ -124,15 +125,13 @@ const App = () => {
       ></div>
       <div
         id="main"
-        className="bg-[#151515] h-screen w-screen relative text-white"
+        className="bg-[#151515] mx-auto h-screen w-screen relative text-white"
       >
-        <div className="px-16 py-8">
-          <div>
-            <Navbar></Navbar>
-          </div>
-          <div className="text-white">
-            <Banner></Banner>
-          </div>
+        {/* main container */}
+        <div className="px-16 py-8 bg-[#151515]">
+          <Navbar></Navbar>
+          <Banner></Banner>
+          <VideoSection></VideoSection>
         </div>
       </div>
     </div>
