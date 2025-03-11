@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LocomotiveScroll from "locomotive-scroll";
 import Navbar from "./components/navbar/Navbar";
 import Banner from "./components/banner/Banner";
-import VideoSection from "./components/videoSection/VideoSection";
+import OurProjects from "./components/ourProjects/OurProjects";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
@@ -128,13 +128,10 @@ const App = () => {
         className="bg-[#151515] mx-auto h-screen w-screen relative text-white"
       >
         {/* main container */}
-        <div className="px-16 py-8 bg-[#151515]">
+        <div className="px-16 py-8 bg-[#151515] overflow-x-hidden">
           <Navbar></Navbar>
           <Banner></Banner>
-          <VideoSection></VideoSection>
-          <div>
-            <h2>hello</h2>
-          </div>
+          <OurProjects></OurProjects>
         </div>
       </div>
     </div>
